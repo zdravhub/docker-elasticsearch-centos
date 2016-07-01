@@ -1,2 +1,2 @@
-# docker-elaticsearch-centos
+# docker-elasticsearch-centos
 Docker Image packaging for Elasticsearch on Centos
