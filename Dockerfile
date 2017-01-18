@@ -1,11 +1,13 @@
 FROM valerianomanassero/java-centos:latest
 
-MAINTAINER Valeriano Manassero valeriano.manassero@staff.aruba.it
+MAINTAINER Zdravko Zdravkov zdravko@octoon.net
 
 RUN rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 ADD elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 RUN yum -y install elasticsearch
 RUN yum -y clean all
+RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
+RUN /usr/share/elasticsearch/bin/plugin install royrusso/elasticsearch-HQ
 
 USER root
 COPY docker-entrypoint.sh /
