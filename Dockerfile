@@ -4,10 +4,11 @@ MAINTAINER Zdravko Zdravkov zdravko@octoon.net
 
 RUN rpm --import http://packages.elastic.co/GPG-KEY-elasticsearch
 ADD elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
-RUN yum -y install elasticsearch
+RUN yum -y install elasticsearch sudo
 RUN yum -y clean all
 
 USER root
+RUN echo "elasticsearch        ALL=(ALL)       NOPASSWD: ALL" >> /etc/sudoers
 COPY docker-entrypoint.sh /
 RUN chmod 755 /docker-entrypoint.sh
 
