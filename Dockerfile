@@ -7,7 +7,7 @@ ADD elasticsearch.repo /etc/yum.repos.d/elasticsearch.repo
 RUN yum -y install elasticsearch
 RUN yum -y clean all
 RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
-RUN /usr/share/elasticsearch/bin/plugin install royrusso/elasticsearch-HQ
+# RUN /usr/share/elasticsearch/bin/plugin install royrusso/elasticsearch-HQ
 
 USER root
 COPY docker-entrypoint.sh /
