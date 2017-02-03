@@ -15,5 +15,9 @@ RUN chmod 755 /docker-entrypoint.sh
 USER elasticsearch
 RUN /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head
 RUN /usr/share/elasticsearch/bin/plugin install royrusso/elasticsearch-HQ
+
 EXPOSE 9200
+
+VOLUME ["/var/lib/elasticsearch"]
+
 ENTRYPOINT ["/docker-entrypoint.sh"]
