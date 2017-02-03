@@ -18,6 +18,6 @@ RUN /usr/share/elasticsearch/bin/plugin install royrusso/elasticsearch-HQ
 
 EXPOSE 9200
 
-VOLUME ["/var/lib/elasticsearch"]
+VOLUME ["/var/lib/elasticsearch/elasticsearch"]
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
