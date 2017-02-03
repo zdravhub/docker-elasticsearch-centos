@@ -7,4 +7,5 @@
                                            -Des.default.path.home=/usr/share/elasticsearch \
                                            -Des.default.path.logs=/var/log/elasticsearch \
                                            -Des.default.path.data=/var/lib/elasticsearch \
-                                           -Des.default.path.conf=/etc/elasticsearch
+                                           -Des.default.path.conf=/etc/elasticsearch \
+                                           -Des.path.data=/var/lib/elasticsearch/elasticsearch
