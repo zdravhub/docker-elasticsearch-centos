@@ -8,4 +8,4 @@
                                            -Des.default.path.logs=/var/log/elasticsearch \
                                            -Des.default.path.data=/var/lib/elasticsearch \
                                            -Des.default.path.conf=/etc/elasticsearch \
-                                           -Des.path.data=/var/lib/elasticsearch/elasticsearch
+                                           -Des.path.data=/var/lib/elasticsearch
